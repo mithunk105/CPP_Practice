@@ -45,7 +45,7 @@ int main()
     return 0;
 }
 
-Output -
+/*Output -
 
 Result  String
 true    a
@@ -70,3 +70,4 @@ false   palindrome
 
 
 ** Process exited - Return Code: 0 **
+*/

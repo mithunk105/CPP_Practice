@@ -53,11 +53,8 @@ void display_menu() {
 }
 
 void play_current_song(const Song &song) {
-    // This function should display 
-    // Playing: followed by the song that is playing
-    
-   
-    std::cout << "You implement this function"<< std::endl;
+    std::cout << "Playing: " << std::endl;
+    std::cout << song << std::endl;
 }
 
 void display_playlist(const std::list<Song> &playlist, const Song &current_song) {
@@ -85,7 +82,6 @@ int main() {
     std::list<Song>::iterator current_song = playlist.begin();
     
     std::cout << "To be implemented" << std::endl;
-    // Your program logic goes here
     display_playlist(playlist, *current_song);
     char selection{};
     display_menu();
@@ -99,8 +95,7 @@ int main() {
             case 'f':
                 current_song = playlist.begin();
                 std::cout << "Playing first song" <<std::endl;
-                std::cout << "Playing:" <<std::endl;
-                std::cout << *current_song << std::endl;
+                play_current_song(*current_song);
                 break;
 
             case 'N':
@@ -113,8 +108,7 @@ int main() {
                 else{
                     current_song++;
                 }
-                std::cout << "Playing:" <<std::endl;
-                std::cout << *current_song << std::endl;
+                play_current_song(*current_song);
                 break;
 
             case 'P':
@@ -128,8 +122,7 @@ int main() {
                 else{
                     current_song--;
                 }
-                std::cout << "Playing:" <<std::endl;
-                std::cout << *current_song << std::endl;
+                play_current_song(*current_song);
                 break;
 
             case 'A':
@@ -147,8 +140,7 @@ int main() {
                 std::cin>>rating_s;
                 playlist.emplace( current_song, name_s, artist_s, rating_s );
                 current_song--;
-                std::cout << "Playing:" <<std::endl;
-                std::cout << *current_song << std::endl;
+                play_current_song(*current_song);
                 break;
                 }
 
@@ -170,7 +162,7 @@ int main() {
     return 0;
 }
 
-Output:
+/*Output:
 
 To be implemented
 God's Plan          Drake                         5 
@@ -296,3 +288,4 @@ Thanks for listening!
 
 
 ** Process exited - Return Code: 0 **
+*/
